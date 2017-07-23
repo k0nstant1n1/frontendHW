@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style> /* немного приукрасил, а заодно повторил CSS */
+            body {
+                background-color: honeydew;
+            }
+            .input {
+                display: flex;
+                justify-content: space-around;
+            }
+            .inp {
+                display: block;
+                width: 25%;
+                height: 50px;
+                font-size: 45px;
+            }
+            .output {
+                display: flex;
+                justify-content: space-around;
+            }
+            p {
+                font-size: 45px;
+                font-weight: normal;
+                font-family:"MV Boli" ;
+                color: darkslategrey;
+            }
+            span {
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="input">
+            <input class="inp" id="rad" type="text" placeholder="радиус">
+            <input class="inp" id="hei" type="text" placeholder="высота">
+            <input class="inp" id="but" type="button" value="расчитать" onclick="cilindr()">
+            <input class="inp" id="res" type="button" value="очистить" onclick="reset()">
+        </div>
+        <div class="output">
+            <p id ="result"></p>
+        </div>
+        <script>
+            function cilindr() {
+            var rad = document.getElementById("rad").value;
+            var hei = document.getElementById("hei").value;
+            var v = 3.14*rad*rad*hei;
+            var s = 2*3.14*rad*(rad+hei);
+            document.getElementById("result").innerHTML = "объем вашего цилиндра равен " + v +"<span> единиц кубических</span><br>" +
+                "а его площадь поверхности " + s + "<span> единиц квадратных</span>";
+            document.body.style = "background: honeydew";
+                }
+            function reset() {
+                document.getElementById("rad").value = "";
+                document.getElementById("hei").value = "";
+                document.getElementById("result").innerHTML = "";
+                document.body.style = "background: white";
+            }
+        </script>
+    </body>
+</html>

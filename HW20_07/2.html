@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+<!-- Створіть чотири функції для арифметичних дій: додавання, віднімання, множення і ділення.
+ Кожна функція повинна приймати 2 параметра і виводити результат їх обчимлення.
+ Функція ділення повинна робити перевірку ділення на нуль. -->
+
+    <body>
+        <script>
+            plus = function(a, b){
+                document.write(a + b);
+            };
+            minus = function(a, b){
+               document.write(a - b);
+            };
+            multiple = function(a, b){
+                document.write(a*b);
+            };
+            divide = function(a, b){
+                if(b === 0){
+                    document.write("На ноль делить нельзя!")
+                }
+                else{
+                document.write(a / b);
+                }
+            };
+            function show(a, b, callback){
+                callback(a, b);
+            }
+            show(225, 15, divide);
+            show(3, 0, divide);
+            show(8, 5, plus);
+            show(3, 0, divide);
+            show(30, 20, minus);
+            show(2, 0, divide);
+            show(38, 80, multiple);
+
+        </script>
+    </body>
+</html>

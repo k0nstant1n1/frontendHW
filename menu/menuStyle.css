@@ -1,0 +1,149 @@
+h1 {
+    text-align: center;
+    height: 70px;
+}
+
+#point {
+    font-size: 60px;
+}
+
+span:hover {
+    font-size: 60px;
+    color: orange;
+}
+
+span {
+    -webkit-transition: color 1s, font-size 4s;
+    -moz-transition: color 1s, font-size 4s;
+    -ms-transition: color 1s, font-size 4s;
+    transition: color 1s, font-size 4s;
+
+    -moz-transition-timing-function: cubic-bezier(.35,.55,.13,.94);
+    -webkit-transition-timing-function: cubic-bezier(.35,.55,.13,.94);
+    -o-transition-timing-function: cubic-bezier(.35,.55,.13,.94);
+    transition-timing-function: cubic-bezier(.35,.55,.13,.94);
+}
+
+.page1submenu {
+ position: absolute;
+    left: 8px;
+    display: none;
+}
+
+.page2submenu {
+    position: absolute;
+    display: none;
+    left: 332px;
+}
+
+.page3submenu {
+    position: absolute;
+    display: none;
+    left: 656px;
+}
+
+.page4submenu {
+    position: absolute;
+    display: none;
+    left: 980px;
+}
+
+.page2subsubmenu {
+    position: absolute;
+    display: none;
+    left: 0px;
+}
+
+li {
+    background: #98EA4F ;
+    width: 300px;
+    padding: 3px 8px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 4px;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 5px;
+    color: #344A21;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+li:hover{
+    background: #344A21;
+}
+
+li.menu:hover .aclass {
+    color:  #A4F859;
+}
+
+.page2submenu li:hover .aclass3 {
+    color: #A4F859;
+}
+
+a:hover {
+    color: #A4F859;
+}
+
+div ul > li:hover .page1submenu {
+    display: block;
+}
+
+div > ul > li {
+    display: inline-block;
+}
+
+div ul > li:hover .page2submenu {
+      display: block;
+  }
+
+div ul > li:hover .page3submenu {
+    display: block;
+}
+
+div ul > li:hover .page4submenu {
+    display: block;
+}
+
+.page2submenu li:hover .page2subsubmenu{
+    display: block;
+}
+
+a:active {
+    color: white;
+}
+
+
+
+
+.color-primary-0 { color: #82C744 }	/* Main Primary color */
+.color-primary-1 { color: #A4F859 }
+.color-primary-2 { color: #98EA4F }
+.color-primary-3 { color: #5F8D37 }
+.color-primary-4 { color: #344A21 }
+
+.color-secondary-1-0 { color: #4AB63F }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #66F357 }
+.color-secondary-1-2 { color: #58DC4A }
+.color-secondary-1-3 { color: #3A8132 }
+.color-secondary-1-4 { color: #22441E }
+
+.color-secondary-2-0 { color: #A2D047 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #C5FB5A }
+.color-secondary-2-2 { color: #BDF252 }
+.color-secondary-2-3 { color: #759339 }
+.color-secondary-2-4 { color: #3F4D22 }

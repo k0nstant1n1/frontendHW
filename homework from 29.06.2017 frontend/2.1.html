@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>logist</title>
+    </head>
+    <body>
+        <div>
+            <input id="id1" type="text" placeholder="введіть кількість магазинів тут">
+            <input type="button" value="розрахувати" onclick="delivery()">
+        </div>
+        <p></p>
+    <script>
+
+        function delivery() {
+            var n = document.getElementById("id1").value;
+            var y = n;
+            do{
+               y *= (n-1);
+               n--;
+            }
+            while(n > 1);
+            return document.write("кількість можливих варіантів доставки " + y);
+        }
+    </script>
+    </body>
+</html>

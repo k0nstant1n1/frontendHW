@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>homeWorkForm</title>
+        <link href="formStyle.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Ласкаво просимо у нашу школу!</h1>
+        <form action="some.file.php">
+            <fieldset>
+                <legend>Увійти</legend>
+                <div>
+                    введіть своє ім'я: <input type="text" name="login" placeholder="enter your name here"/>
+                </div>
+                <br>
+                <div>
+                    введіть пароль:   <input  type="password" name="psw"/>
+                </div>
+                <br>
+                <div>
+                    <input type="button" name="but1" value="увійти"/>
+                </div>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Зареєструватися</legend>
+                <div>
+                    Оберіть мову:
+                    <select name="select">
+                        <option value="ukr">Українська</option>
+                        <option value="ros">Російська</option>
+                        <option value="eng">Англійська</option>
+                    </select>
+                </div>
+                <div>
+                    Введіть ваше ім'я
+                    <input type="text" name="fname" placeholder=" ваше ім'я"/>
+                    <br>
+                    <span>Ввeдіть вашу фамілію</span>
+                    <input type="text" name="lname" placeholder=" ваша фамілія"/>
+                    <br>
+                    придумайте пароль
+                    <input type="password" name="newpsw" placeholder=" пароль"/>
+                </div>
+                <div>
+                   <span>Що ви хочете вивчати?</span>
+                    <br>
+                    <input type="checkbox" name="name1" value="frontend"/> frontend
+                    <br>
+                    <input type="checkbox" name="name1" value="backend"/> backend
+                    <br>
+                </div>
+                <div>
+                    Додати аватарку: <input type="file" name="ava"/>
+                </div>
+                <div>
+                    <input type="reset" name="reset" value="скинути"/>
+                    <input type="submit" name="submit" value="зареєструватися"/>
+                </div>
+                <input type="hidden" name="userId" value="12345"/>
+            </fieldset>
+
+            
+
+        </form>
+    </body>
+</html>

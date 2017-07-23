@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            #id1 {
+                text-align: center;
+            }
+
+            #id2 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Завдання 2.
+        Використовуючи цикли намалюйте в бразурі за допомогою пробілів (&nbsp) і зірочок (*):
+        o	•  Прямокутник
+        o	•  Прумокутний трикутник
+        o	•  Рівносторонній трикутник
+        o	•  Ромб.
+        -->
+
+        <p id="id1"></p>
+        <p id="id2"></p>
+        <script>
+            // прямокутник
+            for(var i = 0; i < 10; i++){
+                document.write("**********<br>");
+            }
+
+            // прямокутний трикутник
+            var a = 0;
+            for(i = 0; i < 10; i++, a = i*3 - 2){
+                while(a > 0){
+                    document.write("*");
+                    a--;
+                }
+                document.write("<br>");
+            }
+
+            // рівносторoнній трикутник
+
+            for(i = 0; i < 10; i++){
+                var str = '';
+                for(a = i; a < 10; a++){
+                    str += "*";
+                }
+                document.getElementById("id1").innerHTML += "<span>" + str + "</span><br>";
+            }
+
+            // ромб
+
+
+            for(i = 0; i < 10; i++){
+                str = '';
+                for(a = 10 - i; a < 11; a++){
+                    str += "*";
+                }
+                document.getElementById("id2").innerHTML += "<span>" + str + "</span><br>";
+            }
+            for(i = 0; i < 10; i++){
+                str = '';
+                for(a = i; a < 10; a++){
+                    str += "*";
+                }
+                document.getElementById("id2").innerHTML += "<span>" + str + "</span><br>";
+            }
+
+        </script>
+    </body>
+</html>

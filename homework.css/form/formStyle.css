@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+input:focus {
+    background-color: #7CE700;
+}
+
+fieldset:nth-child(2) div:nth-child(4) span {
+    color: #00ff90;
+}
+
+fieldset:last-child div:nth-child(3) span{
+    background-color: red;
+}
+
+:not(input) {
+    background-color: #897048;
+}

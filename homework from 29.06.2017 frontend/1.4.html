@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>  /* Добавил стиля, чтобы не забывать CSS) */
+            body{
+                background-color: #ddffdd;
+            }
+            .wrap {
+                display: flex;
+            }
+            .input {
+                width: 1%;
+                height: 50px;
+                font-size: 35px;
+                flex-grow: 1;
+            }
+            #ida{
+                flex-grow: .7;
+                padding-left: 8px;
+            }
+            #idb{
+                flex-grow: .7;
+                padding-left: 8px;
+            }
+            .input:last-child {
+                flex-grow: 1.5;
+            }
+            #idp {
+                font-size: 35px;
+                font-family:"MV Boli" ;
+            }
+            .raschet {
+                display: flex;
+                justify-content: space-around;
+            }
+            #idp2 {
+                font-family:"MV Boli" ;
+            }
+            .oddElem {
+                float: left;
+                width: 7%;
+                height: 50px;
+                font-size: 35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <input class="input" id="ida" type="text" placeholder="число А">
+            <input class="input" id="idb" type="text" maxlength="3" placeholder="число В">
+            <input class="input" type="button" value="посчитать сумму" onclick="summa()">
+            <input class="input" type="button" value="показать нечетные значения" onclick="odd()">
+        </div>
+        <div class="raschet">
+            <p id="idp"></p>
+        </div>
+            <div id="idp2"></div>
+        <script>
+
+            function summa() {
+                var a = document.getElementById("ida").value;
+                var b = document.getElementById("idb").value;
+                a++;
+                for(var sum = 0; a < b; a++){
+                    sum += a;
+                }
+                document.getElementById("idp").innerHTML =
+                    "Сумма всех чисел между введенными вами А и В равна " + sum;
+            }
+            function odd(){
+                var a = document.getElementById("ida").value;
+                var b = document.getElementById("idb").value;
+                if(a % 2 === 0){
+                    a++;
+                }
+                for(; a < b; a++, a++) {
+                    document.getElementById("idp2").innerHTML +=
+                        "<div class='oddElem'>" + a + "</div>";
+
+                }
+            }
+        </script>
+    </body>
+</html>

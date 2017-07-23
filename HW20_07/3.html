@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <!-- Напишіть функцію, яка буде приймати число і визначати:
+  Чи являється воно додатнім чи від’ємним?
+  Чи являється воно простим?
+  Чи ділиться воно на 2,5,3,6,9 без остачі? -->
+        <script>
+            function number_info(a){
+                if(a > 0){
+                    document.writeln("Це додатнє число");
+                } else{
+                    document.writeln("Це від'ємне число");
+                }
+                var simple = true;
+                for(var i = 2; i < a; i ++){
+                    if(a % i === 0){
+                        simple = false;
+                        break;
+                    }
+                }
+                if(simple === true){
+                    document.writeln("Воно просте");
+                }
+                if(a % 2 === 0){
+                    document.writeln("Воно ділиться на 2");
+                }
+                if(a % 3 === 0){
+                    document.writeln("Воно ділиться на 3, 6, 9");
+                }
+                if(a % 5 === 0){
+                    document.writeln("Воно ділиться на 5");
+                }
+            }
+            number_info(17);
+        </script>
+    </body>
+</html>

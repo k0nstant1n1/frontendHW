@@ -1,0 +1,135 @@
+/* Блок кода описывающий раздачу карт ---------------------------------------*/
+div.razdacha {
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+#first, #second, #third, #fourth {
+    position: absolute;
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(.15,.54,.45,.89);
+}
+
+#first {
+    top: 8px;
+    left: 8px;
+    transform: perspective(800px) rotateY(270deg);
+}
+#second {
+    top: 8px;
+    left: 284px;
+    transform: perspective(800px) rotateY(270deg);
+}
+#third {
+    top: 8px;
+    left: 560px;
+    transform: perspective(800px) rotateY(270deg);
+}
+#fourth {
+    top: 8px;
+    left: 836px;
+    transform: perspective(800px) rotateY(270deg);
+}
+
+#five, #six, #seven, #eight {
+    position: absolute;
+    top: 400px;
+    left: 430px;
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(.6,.16,.89,.53);
+}
+
+#five {
+    animation: move1 0.6s 1 forwards;
+    animation-timing-function: cubic-bezier(.58,.12,.74,.92);
+}
+@keyframes move1 {
+    0% { top: 400px; left:430px;}
+    100% { top: 8px; left: 8px;}
+}
+
+#six {
+    animation: move2 0.6s 1 forwards;
+    animation-delay: 0.6s;
+    animation-timing-function: cubic-bezier(.58,.12,.74,.92);
+}
+@keyframes move2 {
+    0% { top: 400px; left:430px;}
+    100% { top: 8px; left: 284px;}
+}
+
+#seven {
+    animation: move3 0.6s 1 forwards;
+    animation-delay: 1.2s;
+    animation-timing-function: cubic-bezier(.58,.12,.74,.92);
+}
+@keyframes move3 {
+    0% { top:400px; left: 430px;}
+    100% { top:8px; left: 560px;}
+}
+
+#eight {
+    animation: move4 0.6s 1 forwards;
+    animation-delay: 1.8s;
+    animation-timing-function: cubic-bezier(.58,.12,.74,.92);
+}
+@keyframes move4 {
+    0% { top:400px; left: 430px;}
+    100% { top:8px; left: 836px;}
+}
+
+/* Блок кода описывающий вращение карт---------------------------------------------------------------------------*/
+
+div.container:hover #five {
+    transform: perspective(800px) rotateY(90deg);
+}
+div.container:hover #six {
+    transform: perspective(800px) rotateY(90deg);
+}
+div.container:hover #seven {
+    transform: perspective(800px) rotateY(90deg);
+}
+div.container:hover #eight {
+    transform: perspective(800px) rotateY(90deg);
+}
+
+
+div.container:hover #first {
+    transform: perspective(800px) rotateY(360deg) scale(1.2);
+    transition-delay: 0.3s;
+    z-index: 1000;
+}
+div.container:hover #second {
+    transform: perspective(800px) rotateY(360deg) scale(1.2);
+    transition-delay: 0.3s;
+    z-index: 1000;
+}
+div.container:hover #third {
+    transform: perspective(800px) rotateY(360deg) scale(1.2);
+    transition-delay: 0.3s;
+    z-index: 1000;
+}
+div.container:hover #fourth {
+    transform: perspective(800px) rotateY(360deg) scale(1.2);
+    transition-delay: 0.3s;
+    z-index: 1000;
+}
+
+
+div.container:not(:hover) #five {
+     transition-delay: 0.3s;
+    transition-timing-function:cubic-bezier(.15,.54,.45,.89);
+ }
+div.container:not(:hover) #six {
+    transition-delay: 0.3s;
+    transition-timing-function:cubic-bezier(.15,.54,.45,.89);
+}
+div.container:not(:hover) #seven {
+    transition-delay: 0.3s;
+    transition-timing-function:cubic-bezier(.15,.54,.45,.89);
+}
+div.container:not(:hover) #eight {
+    transition-delay: 0.3s;
+    transition-timing-function:cubic-bezier(.15,.54,.45,.89);
+}
