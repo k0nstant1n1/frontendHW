@@ -1,0 +1,145 @@
+/*Этот блок кода для меню --------------------------------------------------*/
+
+.page1submenu {
+    position: absolute;
+    left: -42px;
+    display: none;
+}
+
+.page2submenu {
+    position: absolute;
+    display: none;
+    left: -42px;
+}
+
+.page3submenu {
+    position: absolute;
+    display: none;
+    left: -42px;
+}
+
+.page4submenu {
+    position: absolute;
+    display: none;
+    left: -42px;
+}
+
+.page2subsubmenu {
+    position: absolute;
+    display: none;
+    left: -42px;
+}
+
+li {
+    background: #98EA4F ;
+    width: 300px;
+    padding: 3px 8px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 4px;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 5px;
+    color: #344A21;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+li:hover{
+    background: #3A8132;
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+li.menu:hover .aclass {
+    color:  #A4F859;
+}
+
+.page2submenu li:hover .aclass3 {
+    color: #A4F859;
+}
+
+a:hover {
+    color: #A4F859;
+}
+
+div ul > li:hover .page1submenu {
+    display: block;
+}
+
+div > ul > li {
+    display: inline-block;
+}
+
+div ul > li:hover .page2submenu {
+    display: block;
+}
+
+div ul > li:hover .page3submenu {
+    display: block;
+}
+
+div ul > li:hover .page4submenu {
+    display: block;
+}
+
+.page2submenu li:hover .page2subsubmenu{
+    display: block;
+}
+
+/* */
+#animationDiv{
+    position: relative;
+    margin-top: 300px;
+    height: 300px;
+    width: 500px;
+}
+
+img {
+    position: absolute;
+    top: 200px;
+}
+
+img {
+    animation: go 3s infinite;
+}
+@keyframes go {
+    0% {
+        transform: skew(30deg, 0deg);
+        left: -100px;
+        top: 100px;
+        animation-timing-function: cubic-bezier(.25,.36,.81,.47);
+    }
+    50%{
+        left: 550px;
+        top: 50px;
+        transform: scale(2);
+        animation-timing-function: cubic-bezier(.4,.64,.78,.8);
+
+    }
+    100% {
+        left: 1400px;
+        top: 0px;
+        transform: scale(0.3) skew(-30deg, 0deg);
+    }
+}
+
+body {
+    position: fixed;
+}
