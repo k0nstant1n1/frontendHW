@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            td {
+                width: 100px;
+                height: 100px;
+                font-size: 50px;
+                border: solid green 1px;
+                text-align: center;
+            }
+            body {
+                padding-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+<p> Створити двомірний масив елементів розміром 5х5 і заповнити його довільними цілочисельними значеннями.
+ По головній діагоналі всі числа зі знаком (-) замінити на 0, а числа зі знаком (+) на число </p>
+        <table>
+            <script>
+                var x = new Array(5);
+                for(var i = 0; i < x.length; i++){
+                    document.write("<tr>");
+                    x[i] = new Array(5);
+                    for(var j = 0; j < x[i].length; j++){
+                        x[i][j] = Math.floor(Math.random()*200 - 100);
+                        if(i === j && x[i][j] < 0){
+                            x[i][j] = 0;
+                        }
+                        document.write("<td>" + x[i][j] + "</td>");
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+    </body>
+</html>

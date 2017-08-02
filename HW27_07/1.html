@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+<body>
+<p>1. Створити масив розмірністю N елементів, заповнити його довільними цілими значеннями.
+    Вивести найбільше значення масиву, найменше значення масиву, загальну суму елементів,
+    середнє арифметичне усіх елементів, вивести всі непарні значення.</p>
+<script>
+    var n = +prompt("Введіть довжину массиву");
+    var min = 1000;
+    var max = 0;
+    var sum = 0;
+    var arrOdd = [];
+    var j = 0;
+    var arr = new Array(n);
+    for(var i = 0; i < arr.length; i++){
+        arr[i] = Math.floor(Math.random()*1000);
+        if(arr[i] > max){
+            max = arr[i];
+        }
+        if(arr[i] < min){
+            min = arr[i];
+        }
+        sum += arr[i];
+        if(arr[i] % 2 !== 0){
+            arrOdd[j] = arr[i];
+            j++;
+        }
+    }
+    document.write("Найбільше значення массиву = " + max + "<br>" +
+                    "Найменьше значення массиву = " + min + "<br>" +
+                    "Загальна сумма елементів  = " + sum + "<br>" +
+                    "Середнє аріфметичне  = " + sum/n + "<br>" +
+                    "Всі непарні значення = " + arrOdd);
+</script>
+</body>
+</html>
