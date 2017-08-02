@@ -22,11 +22,13 @@
         <table>
             <script>
                 var x = new Array(5);
+                var y = new Array(5);
                 for(var i = 0; i < x.length; i++){
                     document.write("<tr>");
                     x[i] = new Array(5);
+                    y[i] = new Array(5);
                     for(var j = 0; j < x[i].length; j++){
-                        x[i][j] = Math.floor(Math.random()*200 - 100);
+                        x[i][j] = y[i][j] = Math.floor(Math.random()*200 - 100);
                         if(i === j && x[i][j] < 0){
                             x[i][j] = 0;
                         }
@@ -34,6 +36,7 @@
                     }
                     document.write("</tr>");
                 }
+                document.write("Ісходний массив:" + y);
             </script>
         </table>
     </body>
