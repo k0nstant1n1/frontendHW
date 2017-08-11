@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            /*Разработайте функцию-конструктор, которая будет создавать объект Human(человек)
+             создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива
+              по значению свойства Age по возрастанию или по убыванию. */
+
+            function HumanConstructor(age, name, growth){
+                this.age = age;
+                this.name = name;
+                this.growth = growth;
+            }
+            var names = new Array("mary", "nicola", "vasya", "homer", "piter", "youra", "petya", "oksana", "pavel", "igor", "tanya", "yulia", "dasha", "vika");
+            function getName(){
+                return names[Math.floor(Math.random()*14)];
+            }
+
+            var groop = [];
+            for(var i = 0, name = 1; i < 10; i ++, name++){ // створюемо группу людей
+                groop[i] = new HumanConstructor(Math.floor(Math.random()*14 + 20), getName(), Math.floor(Math.random()*50 + 150));
+            }
+
+            function showGroop(){
+                document.write("<table>");
+                for( i = 0; i < groop.length; i ++){
+                    document.write("<tr><td>" + groop[i].name +",</td><td>" + "зріст - " +
+                        groop[i].growth + ",</td><td>" + "вік - " + groop[i].age + "</td></tr>");
+                }
+                document.write("</table>");
+            }
+            document.write("Маємо ось таку группу людей до сортіровкі за віком: <br>");
+            showGroop();
+
+            function sortAge(arr, ascending){
+                var buble = 0;
+                if(ascending === true){
+                    for(var j = 0; j < arr.length; j ++){
+                        for(var i = 0; i < arr.length - 1; i ++){
+                            if(arr[i].age > arr[i + 1].age){
+                                buble = arr[i];
+                                arr[i] = arr[i + 1];
+                                arr[i + 1] = buble;
+                            }
+                        }
+                    }
+                }
+                if(ascending === false){
+                    for(var j = 0; j < arr.length; j ++){
+                        for(var i = 0; i < arr.length - 1; i ++){
+                            if(arr[i].age < arr[i + 1].age){
+                                buble = arr[i];
+                                arr[i] = arr[i + 1];
+                                arr[i + 1] = buble;
+                            }
+                        }
+                    }
+                }
+            }
+            document.write("<hr>");
+            document.write("І ось та ж группа після сортіровки: <br>");
+            sortAge(groop, true);
+            showGroop();
+            document.write("<hr>");
+            document.write("A ось та ж группа людей після сортіровки коли ascending === false: <br>");
+            sortAge(groop, false);
+            showGroop();
+        </script>
+    </body>
+</html>

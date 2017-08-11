@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- Разработайте функцию-конструктор, которая будет создавать объект Human(человек)
+         добавьте на свое усмотрение свойства и методы в этот объект.
+          Подумайте какие методы и свойства следует сделать уровня экземпляра,
+          а какие уровня функции-конструктора. -->
+
+        <script>
+
+            var moods = Array("good", "bad", "great", "sad", "even");
+            function Human(){
+                this.age = Math.floor(Math.random()*20 + 20);
+                this.growth = Math.floor(Math.random()*40 + 150);
+                this.weight = Math.floor(Math.random()*55 + 45);
+
+                var hairColors = Array("ginger", "black", "shaten", "white");
+                this.hair = hairColors[Math.floor(Math.random()*4)];
+
+                var eyeColors = Array("blue", "green", "brown", "grey");
+                this.eyes = eyeColors[Math.floor(Math.random()*4)];
+
+                this.mood = moods[Math.floor(Math.random()*5)];
+
+                Human.prototype.legs = 2;
+                Human.prototype.arms = 2;
+                Human.prototype.citizenship = "ukranian";
+
+                Human.prototype.changeMood = function(){
+                    this.mood = moods[Math.floor(Math.random()*5)];
+                };
+
+                Human.prototype.sayHi = function(){
+                    var msg = '';
+                   switch(this.mood){
+                        case "good":
+                            msg = "Hi! What's up?<br>";
+                            break;
+                        case "bad":
+                            msg = "Leave it!<br>";
+                            break;
+                        case "great":
+                            msg = "Hi! How are you doing?<br>";
+                            break;
+                        case "sad":
+                            msg = "I don't want talk<br>";
+                            break;
+                        case "even":
+                            msg = "Hello<br>";
+                            break;
+                        default:
+                            msg = "My mood is undefined<br>";
+                    }
+                    return msg;
+                }
+
+
+            }
+            Human.createTwins = function(hair, eyes){
+                var twins = [];
+                twins[0] = new Human;
+                twins[1] = new Human;
+                for(elem in twins[0]){
+                    if(elem === 'mood'){
+                        continue;
+                    }
+                    twins[1][elem] = twins[0][elem];
+                }
+                twins[0].hair = hair;
+                twins[1].hair = hair;
+                twins[0].eyes = eyes;
+                twins[1].eyes = eyes;
+
+                return twins;
+            };
+            var twins = Human.createTwins("blond", "skyblue");
+            document.write("<table>");
+            for(var prop in twins[0]){
+                if(typeof twins[0].prop === 'function'){ // Тут я хочу зробити виклик метода, але щось іде не так
+                    document.write("<tr><td>" + prop + "</td><td>" + twins[0].prop() + "</td></tr>")
+                }
+                else{
+                document.write("<tr><td>" + prop + "</td><td>" + twins[0][prop] + "</td></tr>")
+                }
+            }
+            document.write("</table>");
+
+            document.write("<table>");
+            for(var pro in twins[1]){
+                if(typeof pro === 'function'){ // Чомусь цикл не заходить у цю ветку, навіть якщо властивість є функцією.
+                    //
+                    document.write("<tr><td>" + pro + "</td><td>" + twins[1][pro]() + "</td></tr>")
+                }
+                else{
+                    document.write("<tr><td>" + pro + "</td><td>" + twins[1][pro] + "</td></tr>")
+                }
+            }
+            document.write("</table>");
+        </script>
+    </body>
+</html>

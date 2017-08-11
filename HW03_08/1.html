@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            //Создайте функцию-конструктор Box(коробка) для создания объекта со свойствами
+            // Height(высота), Width(ширина), Depth(глубина) и Material(материал).
+            // Также в объекте должны быть методы Volume - для получения объема и equals() – для сравнения объектов,
+            // объекты должны считаться равными если содержат одинаковые значения в свойстве Material.
+
+            function Box(h, w, d, m){
+                this.height = h;
+                this.width = w;
+                this.depth = d;
+                this.material = m;
+                this.volume = function(){
+                    return this.depth * this.height * this.width;
+                };
+                this.equals = function(someObj){
+                   return (this.material === someObj.material);
+                }
+            }
+
+            // код для перевірки
+            var x = new Box(10, 22, 3, "wood");
+            var z = new Box(1, 3, 344, "wood");
+            var y = new Box(2, 3, 33, "steel");
+            document.write(x.equals(z) + "<br>");
+            document.write(x.equals(y) + "<br>");
+            document.write(x.volume());
+        </script>
+    </body>
+</html>

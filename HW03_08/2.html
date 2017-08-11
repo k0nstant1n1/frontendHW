@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- Создайте функцию конструктор, которая создает объект со свойством экземпляра,
+         свойством функции-конструктора, с методом экземпляра и методом функции-конструктора.
+          Имена выберите произвольно. -->
+
+        <script>
+            function Zevs(x){
+                this.name = x;// свойство экземпляра
+                this.introduse = function(){ // метод экземпляра
+                    document.write("<br> Hello, my name is " + this.name + "<br>");
+                }
+            }
+            Zevs.prototype.legs = 2; // свойство функции-конструктора
+            Zevs.prototype.hello = function(){ // метод функции-конструктора
+                document.writeln("<br>" + "Hi, what's up?");
+            };
+
+            // код для проверки
+            var x = new Zevs("Odissey");
+            x.introduse();
+            x.hello();
+        </script>
+    </body>
+</html>
