@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Задание 2</h1>
+<p>
+    Разработайте страницу, которая будет выводить сумму двух GET параметров a и b. Например, если на
+    страницу заходят по адресу, page.html?a=100&b=200, то в теле страницы должно отображаться сообщение «сумма 300».</p>
+<p id="pp"></p>
+<script>
+    var GETparams = window.location.search.substr(1);
+    var arrayOfGet = GETparams.split('&');// получаем массив ГЕТ параметров
+
+    //вытаскиваем из всевозможных GET параметров нужные нам
+    for(var i = 0; i < arrayOfGet.length; i++){
+        if(arrayOfGet[i][0] === 'a'){
+            var a = arrayOfGet[i].split('=')[1];
+        }
+        if(arrayOfGet[i][0] === 'b'){
+            var b = arrayOfGet[i].split('=')[1];
+        }
+    }
+    document.getElementById('pp').innerHTML = Number(a) + Number(b);
+</script>
+</body>
+</html>
