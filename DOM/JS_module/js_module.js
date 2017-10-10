@@ -14,6 +14,8 @@ function addListener(domElem, event, handler){
     }
 }
 
+
+// проверка
  var p = document.getElementsByTagName('p')[0];
  addListener(p,'click', changeColor);
 
