@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classNameModule</title>
+    <style>
+        button{
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <p>Разработайте модуль, который будет содержать функцию для получения элементов на странице
+        с определенным значением в атрибуте с именем class. Пример использование модуля:
+        var arr = MyQuery.FindClass(“redButton”); – возвращает массив элементов с атрибутом class=”redButton”. </p>
+    <label class="redButton">
+        <button class="redButton">redButton</button> Красная кнопка
+    </label>
+</body>
+<script>
+    var MyQuery = {
+        findClass : function (className) {
+           var collection = document.getElementsByClassName(className);
+           var arr = [].slice.call(collection);
+           return arr;
+        }
+    };
+    // Функция возвращает именно массив элементов, а не коллекцию.
+</script>
+</html>
