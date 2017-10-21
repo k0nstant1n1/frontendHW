@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>hello</title>
+        <link href="../css/es6.css" rel="stylesheet"/>
+    </head>
+    <body>
+    <!--
+    - cоздать страничку з хедером, футером, меню, 2 section, в одном из которых будет форма з валидацией на js,
+     при этом использовать let, const, стрелочные функции, параметры по умолчанию, spread/rest операторы,
+      литералы обьектов, деструктиризация, ключевое слово super для обьектов, строковые шаблоны, for...of
+    - для усложнения: для меню у вас есть динамический массив вашых пунктов, например: ["Home", "Articles", "About Us"],
+     подумайте как это можно выводить на вашу страницу с помощью map
+     -->
+
+        <div class="header">
+            <h1>Wellcome to our shop!</h1>
+        </div>
+        <div class="content">
+            <div class="menuContainer"></div>
+            <div class="form">
+                <form>
+                    <fieldset>
+                        <legend>sign in</legend>
+                        <table>
+                            <tr>
+                                <td><label>login:<br><input id="login" type="text" name="login"></label></td>
+                                <td rowspan="2"><button>sign in</button></td>
+                            </tr>
+                            <tr>
+                                <td><label>password:<br><input id="password" type="password" name="password"></label></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </body>
+    <script src="../js/menu.js"></script>
+    <script src="../js/formValidation.js"></script>
+</html>

@@ -1,0 +1,42 @@
+
+h1{
+    color: crimson;
+    font-size: 80px;
+}
+
+.header {
+    width: 100%;
+    height: 140px;
+    background-color: cornsilk;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuPoint{
+    display: block;
+    text-decoration: none;
+    background-color: coral ;
+    padding: 8px;
+    width: 22%;
+    font-size: 40px;
+    text-align: center;
+    color: darkslategrey;
+}
+
+.menuPoint:hover{
+    background-color: burlywood;
+}
+
+fieldset{
+    width: 40%;
+}
+
+button{
+    width: 200px;
+    height: 60px;
+    margin-left: 50px;
+}
