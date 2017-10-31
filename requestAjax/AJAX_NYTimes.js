@@ -4,10 +4,10 @@
 (function(){
 
     // эта функция получает объект полученный из JSON и делает из него
-    // div-элемент, содержащий картинку и ссылку
+    // div-элемент, содержащий картинку и ссылку на материал из New York Times
     function createStoryDiv(jsonResult) {
         // как показала практика - иногда в NYTimes бывают статьи без фотографий
-        // поэтому необходима следующая проверка
+        // поэтому, при помощи следующей проверки, мы их просто пропустим)
         if (jsonResult.multimedia[3] !== undefined) {
             let img = document.createElement('img');
             img.setAttribute('src', jsonResult.multimedia[3].url);
@@ -53,7 +53,8 @@
         return content;
     }
 
-    function sendRequest(){  //эта функция посылает ajax запрос и в случае успешного ответа - выводит на страницу результат
+    function sendRequest(){  //эта функция посылает ajax запрос и в случае успешного ответа - выводит на страницу результат при
+                             // помощи createListOfStoryes, описанной выше
         let xhttp = new XMLHttpRequest();
         //в запросе url и api-key взяты с сайта http://developer.nytimes.com/
         xhttp.open('get','https://api.nytimes.com/svc/topstories/v2/home.json?api-key=29b19f7682264fac93e36468a3ae1119',true);
