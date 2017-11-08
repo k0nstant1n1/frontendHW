@@ -1,0 +1,21 @@
+.shop{
+    display: flex;
+    justify-content: space-around;
+}
+
+.production{
+    width: 50%;
+    height: 700px;
+     border: solid 2px #66ff33;
+}
+
+.cart{
+    width: 50%;
+    background: url(../image/cart.png) center no-repeat;
+    border: solid 2px #66ff33;
+}
+
+.product{
+    float: left;
+}
+

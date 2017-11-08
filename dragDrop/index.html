@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>drag & drop</title>
+        <link href="src/css/dragDrop.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>welcome!</h1>
+        </header>
+        <div class="shop">
+            <div class="production">
+                <div class="product" draggable="true" id="orange">
+                    <img src="src/image/orange.jpg" height="200px"/>
+                </div>
+                <div class="product" draggable="true" id="peach">
+                    <img src="src/image/peach.jpg" height="200px"/>
+                </div>
+                <div class="product" draggable="true" id="pear">
+                    <img src="src/image/pear.jpg" height="200px"/>
+                </div>
+                <div class="product" draggable="true" id="apple">
+                    <img src="src/image/apple.jpg" height="200px"/>
+                </div>
+                <div class="product" draggable="true" id="plum">
+                    <img src="src/image/plum.jpg" height="200px" />
+                </div>
+                <div class="product" draggable="true" id="cucumber">
+                    <img src="src/image/cucumber.jpg" height="200px" />
+                </div>
+                <div class="product" draggable="true" id="tomato">
+                    <img src="src/image/tomato.jpg" height="200px"/>
+                </div><div class="product" draggable="true" id="onion">
+                <img src="src/image/onion.jpg" height="200px"/>
+            </div>
+                <div class="product" draggable="true" id="strawberry">
+                    <img src="src/image/strawberry.jpg" height="200px"/>
+                </div>
+
+            </div>
+            <div class="cart">
+                <audio id="dropFromCart">
+                    <source src="src/sounds/dropFromCart.mp3"/>
+                </audio>
+                <audio id="dropToCart">
+                    <source src="src/sounds/dropToCart.mp3"/>
+                </audio>
+            </div>
+        </div>
+    </body>
+    <script src="src/js/dragDrop.js"></script>
+</html>

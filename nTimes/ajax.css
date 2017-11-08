@@ -1,0 +1,29 @@
+
+
+.contentDiv{
+    width: 900px;
+    height: 140px;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-bottom: solid 2px #47331f;
+}
+
+.imgDiv{
+    width: 226px;
+    margin-right: 20px;
+    float: left;
+}
+
+.linkDiv{
+    height: 140px;
+    width: 640px;
+    float: left;
+}
+
+a:link{
+    color: #3366ff;
+}
+
+a:visited{
+    color: #3366ff;
+}
