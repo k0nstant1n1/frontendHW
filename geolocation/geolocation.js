@@ -15,7 +15,7 @@ function getLocation(){
 }
 
 function currentCoord(position){  // функция callback для метода getCurrentPosition
-    let x = (id) => {return document.getElementById(id)};
+    let x = (id) => {return document.getElementById(id);};
     // далее функция записывает геолокационные данные в соответствующие элементы на странице
     x('latitude').innerHTML = position.coords.latitude;
     x('longitude').innerHTML = position.coords.longitude;
@@ -26,8 +26,8 @@ function currentCoord(position){  // функция callback для метода
     x('speed').innerHTML = position.coords.speed;
 }
 
-function showError(error){
-    if(error){
+function showError(error){       // это тоже функция callback для метода getCurrentPosition
+    if(error){                   // она выводит сообщение об ошибке, если ошибка случается
         let errorNode = document.createElement('h2');
         switch(error.code){
             case error.PERMISSION_DENIED:
