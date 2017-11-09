@@ -13,9 +13,9 @@ let validate = (input) =>{             // эта функция возвраща
 
 let formValidate = () =>{           // эта функция проверяет поля ввода логина и пароля
     if(validate(login) === 'true' && validate(psw) === 'true'){
-        alert('login & password validation passed successfully!');
+        window.alert('login & password validation passed successfully!');
     }else{
-        alert('login or password is entered wrong');
+        window.alert('login or password is entered wrong');
     }
 };
 
