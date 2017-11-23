@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bigImg</title>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $('body').append('<img src="https://4.bp.blogspot.com/-G-ZyU1-1Dj4/WXS8roTO44I/AAAAAAACMFI/FRrlptodO2ULXATv-l9YmBtnoK8eHFoTACKgBGAs/s0/Ocean_Waves_Smashing_4k.jpg" />')
+                .ready(function(){  // Вот в этом месте у меня вопрос: на w3schools пишут что функция ready срабатывает когда полностью прогружен DOM,
+                                    // и я так понял что для срабатывания этой функции достаточно прогрузки тега img, но сама картинка еще не загружена!
+                                    // так вот вопрос - как сделать чтобы alert выскакивал именно после загрузки картинки?
+                    alert('Изображение успешно загружено');
+                });
+        })
+
+    </script>
+</head>
+<body>
+    <h1>Вставить изображение большого размера с внешнего ресурса
+        (для того, чтобы оно дольше загружалось).
+        После загрузки изображения должно отобразится модальное
+        окно с сообщением о успешной загрузке изображения. </h1>
+</body>
+</html>
